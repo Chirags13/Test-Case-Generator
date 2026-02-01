@@ -6,7 +6,7 @@ from typing import Dict, Any
 
 class GeminiClient:
     def __init__(self, api_key: str):
-        genai.configure(api_key='AIzaSyBNYUgsEMfmHOA9ovcYdN1pQl2me7iAdpo')
+        genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel('gemini-2.5-flash')
     
     def interpret_requirement(
