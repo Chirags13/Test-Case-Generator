@@ -21,6 +21,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # restrict later
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
